@@ -391,7 +391,7 @@ int main()
 	//
 	// The AllocateParamGPUMemory() function allocates the main GPU memory required to store the parameters of all weight layers, and their current 
 	// derivatives, and the running averages of the squared derivatives of all trainable parameters. The definitions of these variables is provided in 
-	// the xxx.cu file that includes the implementation of the AllocateParamGPUMemory() function. 
+	// the Functions.cpp file that includes the implementation of the AllocateParamGPUMemory() function. 
 	//
 	// The AllocateAuxiliaryGPUMemory() function allocates additional GPU memory required to store some intermediate results, and store data required 
 	// by few cuda kernels. The definitions of these additional variables is provided in the xxx.cu file that includes the implementation of the 
