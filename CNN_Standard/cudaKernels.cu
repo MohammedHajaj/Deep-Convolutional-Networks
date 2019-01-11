@@ -25,10 +25,10 @@ __global__ void MaxPoolingForward(float *s, float *c, int *Indx, int CRC, int SR
 	/*
 
 	NumCh:- Number of output channels per image. Total number of channels in a convolutional layer is NumCh*BatchSize.
-	Src1:-  Pooling size is Src1×Src1.
+	Src1:-  Pooling size is Src1Ã—Src1.
 	Src2:-  Pooling stride.
-	CRC:-   Input channel size is CRC×CRC (output channel size of previous stage before applying maxpooling).
-	SRC:-   Output channel size is SRC×SRC after applying pooling.
+	CRC:-   Input channel size is CRCÃ—CRC (output channel size of previous stage before applying maxpooling).
+	SRC:-   Output channel size is SRCÃ—SRC after applying pooling.
 	c:-     Input buffer that conatians all input channels (output channels of the previous layer).
 	Indx:-  Output buffer to store the positon of the maximum value in each pooling square to be used by MaxPoolingBackward in the backward pass.
 	s:-     Output buffer where this cuda kernel stores the all output channels after applying maximum pooling.
@@ -80,7 +80,7 @@ __global__ void MaxPoolingBackward(float *c, float *s, int *Indx, int SN, int Nu
 	/*
 
 	NumCh:- Number of output channels per image. Total number of channels in a convolutional layer is NumCh*BatchSize.
-	SN:-    The channel size on the output side of the mapooling stage, SN = SRC×SRC.
+	SN:-    The channel size on the output side of the mapooling stage, SN = SRCÃ—SRC.
 	s:-     Input buffer that contains the error signal with respect to the activations of all channels on the output side of the maxpooling stage.
 	Indx:-  Input buffer where the positon of the maximum value in each pooling square was stored in the forward pass by MaxPoolingForward.
 	c:-     Output buffer where this cuda kernel stores the error signal with respect to the activations of all channels on the input side of the maxpooling stage.
