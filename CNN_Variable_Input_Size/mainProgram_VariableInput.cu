@@ -51,7 +51,7 @@ int Operation_Mode = TRAIN_PLUS_INFERENCE;
 //============================================================================================================================================================
 
 
-float lr = 0.024f / float(BatchSize);
+float lr = 0.1f / float(BatchSize);
 float lmda = 0.05f;
 
 
@@ -95,7 +95,7 @@ float lmda = 0.05f;
 ////============================================================================================================================================================
 
 
-char DataFloder[] = "E:/Rand10/";
+char DataFloder[] = "C:/FolderPath/FolderName/";
 
 
 //============================================================================================================================================================
@@ -279,7 +279,7 @@ int main()
 	if (Operation_Mode == TRAIN || Operation_Mode == INTERRUPTED_TRAIN || Operation_Mode == TRAIN_PLUS_INFERENCE || Operation_Mode == INTERRUPTED_TRAIN_PLUS_INFERENCE)
 	{
 		outParam = fopen("Output_param_final.txt", "wb");
-		outParamCopy = fopen("Output1_param_copy.txt", "wb");
+		outParamCopy = fopen("Output_param_copy.txt", "wb");
 		outMeansVariances = fopen("Output_MeansVariances.txt", "wb");
 	}
 
@@ -290,7 +290,7 @@ int main()
 
 	if (Operation_Mode == INTERRUPTED_TRAIN || Operation_Mode == INTERRUPTED_TRAIN_PLUS_INFERENCE)
 	{
-		inParam = fopen("Output_param_copy.txt", "rb");
+		inParam = fopen("Input_param_copy.txt", "rb");
 	}
 
 	//=======================================================================================================================================================
@@ -300,8 +300,8 @@ int main()
 
 	if (Operation_Mode == INFERENCE)
 	{
-		inParam = fopen("Output_param_final.txt", "rb");
-		inMeansVariances = fopen("Output_MeansVariances.txt", "rb");
+		inParam = fopen("Input_param_final.txt", "rb");
+		inMeansVariances = fopen("Input_MeansVariances.txt", "rb");
 	}
 
 
