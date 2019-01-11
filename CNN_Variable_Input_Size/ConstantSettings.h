@@ -24,13 +24,13 @@
 //=====================================================================================================================================================
 
 
-const int NumEpoch = 6;
-const int BatchSize = 20;
+const int NumEpoch = 100;
+const int BatchSize = 100;
 
 
-const int TrainSize = 6500;
-const int TestSize = 6500;
-const int ValSize = 6500;
+const int TrainSize = 130000;
+const int TestSize = 5000;
+const int ValSize = 5000;
 
 //=====================================================================================================================================================
 // To simplify the portioning of data into batches, we ensure that the number of images in each dataset is a multiple of the batch size.  
@@ -154,7 +154,7 @@ const int wsSize = WinSize[NumWin - 1] * WinSize[NumWin - 1] * BatchSize *OutCh[
 
 
 const int In1 = OutCh[CL - 1];
-const int Out1 = 10;
+const int Out1 = 100;
 const int NumClasses = Out1;
 
 
