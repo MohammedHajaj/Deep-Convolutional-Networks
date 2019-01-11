@@ -756,8 +756,8 @@ void InitializeConvLayerParam(int *IR, int *CR, int *SR, int *InCh, int *Xr, int
 	/*
 
 	CL :-    The number of convolutional layers.
-	Xr[i], Xc[i] :- define the total size of the input channels for layer i, total input channel size of all images in the batch is Xr[i]×Xc[i].
-	Yr[i], Yc[i] :- define the total size of the output channels for layer i, total output channel size of all images in the batch is Yr[i]×Yc[i].
+	Xr[i], Xc[i] :- define the total size of the input channels for layer i, total input channel size of all images in the batch is Xr[i]Ã—Xc[i].
+	Yr[i], Yc[i] :- define the total size of the output channels for layer i, total output channel size of all images in the batch is Yr[i]Ã—Yc[i].
 	WSize[i] :-     Number of weights in convolutional layer i.
 	IR[i] :-        the height/width of a single square input channel for convolutional layer i.
 	CR[i] :-        the height/width of a single square output channel before maxpooling for convolutional layer i.
