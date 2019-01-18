@@ -16,7 +16,7 @@
 
 
 //=====================================================================================================================================================
-// NumEpoch:-  defines the number of training epochs
+// NumEpoch:-  defines the number of training epochs. This number has to be larger than one because the last epoch is used to generate the BN fixed means and variances. 
 // BatchSize:-  defines the batch size.
 // TrainSize :- defines the number of training images in the training dataset.
 // TestSize :- defines the number of test images in the test set.
@@ -64,7 +64,7 @@ const int TestSizeM = (TestSize / BatchSize)*BatchSize;
 //=====================================================================================================================================================
 // CL :- the number of conv layers. 
 // InCh1 :- the number of input channels to the first conv layer. For colour RGB images InCh1 is 3.
-// IR1 :- the input channel size (to the first conv layer) is IR1×IR1.
+// IR1 :- the input channel size (to the first conv layer) is IR1Ã—IR1.
 // JMP :- defines the size of the residual block which is also equal to the number of consecutive conv layer that will be jumped-ahead by the residual 
 // connection. The number of the convo layer should by 1 + n*JMP, where n is any integer number.  
 //
