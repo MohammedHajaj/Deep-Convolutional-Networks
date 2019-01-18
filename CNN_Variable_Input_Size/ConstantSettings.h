@@ -16,7 +16,7 @@
 
 
 //=====================================================================================================================================================
-// NumEpoch:-  defines the number of training epochs
+// NumEpoch:-  defines the number of training epochs. This number has to be larger than one because the last epoch is used to generate the BN fixed means and variances. 
 // BatchSize:-  defines the batch size.
 // TrainSize :- defines the number of training images in the training dataset.
 // TestSize :- defines the number of test images in the test set.
