@@ -7,7 +7,7 @@
 // the network structure, and the operationMode of the main program. Therefore this simple .h can easily be used to change the settings of 
 // the training and inference stages, and change the structure of the network. All parameters that are constant and do not change during 
 // training are defined as constant integers. This will prevent any function or CUDA kernel from changing any of these settings unintentionally.
-// By defining these parameters as constant integers and including this .h file in all source code (.cu) files all functions and CUDA kernels can 
+// By defining these parameters as constant integers and including this .h file in all source code (.cu or .cpp) files all functions and CUDA kernels can 
 // recognize and use these parameters without being able to change them.
 //
 //=====================================================================================================================================================
